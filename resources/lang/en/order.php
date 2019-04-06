@@ -16,4 +16,4 @@ return [
     'tabs' => [
         'items' => 'Items'
     ]
-]
+];
