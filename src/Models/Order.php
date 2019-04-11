@@ -38,4 +38,12 @@ class Order extends Model implements EntityContract
     {
         return $this->belongsTo(LegalEntity::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function items(): HasMany
+    {
+        return $this->belongsTo(OrderItem::class, 'order_id');
+    }
 }
