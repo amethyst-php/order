@@ -28,7 +28,7 @@ class OrderItem extends Model implements EntityContract
      */
     public function order(): BelongsTo
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsTo(config('amethyst.order.data.order.model'));
     }
 
     /**
@@ -36,6 +36,6 @@ class OrderItem extends Model implements EntityContract
      */
     public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(config('amethyst.product.data.product.model'));
     }
 }

@@ -28,7 +28,7 @@ class Order extends Model implements EntityContract
      */
     public function seller(): BelongsTo
     {
-        return $this->belongsTo(LegalEntity::class);
+        return $this->belongsTo(config('amethyst.legal-entity.data.legal-entity.model'));
     }
 
     /**
@@ -36,7 +36,7 @@ class Order extends Model implements EntityContract
      */
     public function buyer(): BelongsTo
     {
-        return $this->belongsTo(LegalEntity::class);
+        return $this->belongsTo(config('amethyst.legal-entity.data.legal-entity.model'));
     }
 
     /**
@@ -44,6 +44,6 @@ class Order extends Model implements EntityContract
      */
     public function items(): HasMany
     {
-        return $this->belongsTo(OrderItem::class, 'order_id');
+        return $this->belongsTo(config('amethyst.order.data.order-item.model'), 'order_id');
     }
 }
