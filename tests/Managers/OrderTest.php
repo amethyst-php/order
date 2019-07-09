@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Managers;
+namespace Amethyst\Tests\Managers;
 
-use Railken\Amethyst\Fakers\OrderFaker;
-use Railken\Amethyst\Managers\OrderManager;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Fakers\OrderFaker;
+use Amethyst\Managers\OrderManager;
+use Amethyst\Tests\BaseTest;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
 class OrderTest extends BaseTest

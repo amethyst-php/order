@@ -2,7 +2,7 @@
 
 return [
     'enabled'    => true,
-    'controller' => Railken\Amethyst\Http\Controllers\Admin\OrderItemsController::class,
+    'controller' => Amethyst\Http\Controllers\Admin\OrderItemsController::class,
     'router'     => [
         'as'     => 'order-item.',
         'prefix' => '/order-items',
