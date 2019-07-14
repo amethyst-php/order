@@ -5,6 +5,7 @@ namespace Amethyst\Models;
 use Amethyst\Common\ConfigurableModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Lem\Contracts\EntityContract;
 
@@ -45,6 +46,6 @@ class Order extends Model implements EntityContract
      */
     public function items(): HasMany
     {
-        return $this->belongsTo(config('amethyst.order.data.order-item.model'), 'order_id');
+        return $this->hasMany(config('amethyst.order.data.order-item.model'), 'order_id');
     }
 }
