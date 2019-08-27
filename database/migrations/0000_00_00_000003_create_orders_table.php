@@ -14,9 +14,9 @@ class CreateOrdersTable extends Migration
     {
         Schema::create(Config::get('amethyst.order.data.order.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('seller_id')->unsigned();
+            $table->integer('seller_id')->unsigned()->nullable();
             $table->foreign('seller_id')->references('id')->on(Config::get('amethyst.legal-entity.data.legal-entity.table'));
-            $table->integer('buyer_id')->unsigned();
+            $table->integer('buyer_id')->unsigned()->nullable();
             $table->foreign('buyer_id')->references('id')->on(Config::get('amethyst.legal-entity.data.legal-entity.table'));
             $table->timestamps();
             $table->softDeletes();
