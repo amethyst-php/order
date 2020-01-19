@@ -1,6 +1,6 @@
 # amethyst-order
 
-[![Build Status](https://travis-ci.org/amethyst-php/order.svg?branch=master)](https://travis-ci.org/amethyst-php/order)
+[![Action Status](https://github.com/amethyst-php/order/workflows/test/badge.svg)](https://github.com/amethyst-php/order/actions)
 
 [Amethyst](https://github.com/amethyst-php/amethyst) package.
 
